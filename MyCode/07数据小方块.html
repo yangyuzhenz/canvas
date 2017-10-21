@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas></canvas>
+</body>
+<script>
+  //获取画布
+  var canvas=document.querySelector('canvas');
+  //设置大小
+  canvas.width=300;
+  canvas.height=300;
+  canvas.style.border='1px solid #000';  
+  //设置画笔
+  var context=canvas.getContext('2d');
+
+  //设置小方格的宽度
+  var sWidth=10;
+  //传入一个数据
+  var data={
+    x1:150,
+    y1:200,
+    x2:50,
+    y2:50
+  }
+  //计算小方格的坐标
+  context.moveTo(data.x1-sWidth/2,data.y1-sWidth/2);
+  context.lineTo(data.x1+sWidth/2,data.y1-sWidth/2);
+  context.lineTo(data.x1+sWidth/2,data.y1+sWidth/2);
+  context.lineTo(data.x1-sWidth/2,data.y1+sWidth/2);
+  context.closePath();
+  // context.stroke();
+  context.fill();
+  
+  context.fillRect(data.x2-sWidth/2,data.y2-sWidth/2,10,10);
+  context.fill();
+  
+</script>
+</html>

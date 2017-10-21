@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id=""></canvas>
+</body>
+<script>
+  //获取画布
+  var canvas=document.querySelector('canvas');
+  //设置样式
+  canvas.style.border='1px solid red';
+  //设置画笔
+  var context=canvas.getContext('2d');
+
+  context.beginPath();
+  context.moveTo(5,5);
+  context.lineTo(50,5);
+  context.strokeStyle='red';
+  context.stroke();
+
+  context.beginPath();
+  context.moveTo(5,25);
+  context.lineTo(50,25);
+  context.strokeStyle='green';
+  context.stroke();
+
+  context.beginPath();
+  context.moveTo(5,45);
+  context.lineTo(50,45);
+  context.strokeStyle='blue';
+  context.stroke();
+</script>
+</html>

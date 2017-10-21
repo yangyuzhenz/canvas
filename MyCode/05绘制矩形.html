@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas></canvas>
+</body>
+<script>
+  //获取画布
+  var canvas=document.querySelector('canvas');
+  //设置大小
+  canvas.width=600;
+  canvas.height=600;
+  canvas.style.border='1px solid #000';  
+  //设置画笔
+  var context=canvas.getContext('2d');
+  // 1.设置矩形，再连接
+  // context.rect(100,100,300,400);
+  // context.stroke();
+  // 2.描边矩形
+  // context.strokeRect(100,100,200,300);
+  // 3.填充矩形
+  // context.fillRect(100,100,200,300);
+  // // 4.清除矩形
+  // context.clearRect(200,100,200,300);
+  
+   context.rect(200,100,100,200);
+   context.fill();
+   context.rect(100,100,100,200);
+   context.stroke();
+   
+  
+</script>
+</html>

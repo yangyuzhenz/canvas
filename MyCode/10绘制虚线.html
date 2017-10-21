@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas></canvas>
+</body>
+<script>
+  //获取画布
+  var canvas=document.querySelector('canvas');
+  //设置大小
+  canvas.width=300;
+  canvas.height=300;
+  canvas.style.border='1px solid #000';  
+  //设置画笔
+  var context=canvas.getContext('2d');
+  context.moveTo(10,10);
+  context.lineTo(100,10);
+  //设置虚线
+  // context.setLineDash([5]);
+
+  context.setLineDash([5,10]);
+  
+
+  context.stroke();
+</script>
+</html>
