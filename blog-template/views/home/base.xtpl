@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的博客</title>
+    <link rel="stylesheet" href="home/css/normalize.css">
+    <link rel="stylesheet" href="home/css/fonts.css">
+    <link rel="stylesheet" href="home/css/base.css">
+    <link rel="stylesheet" href="home/css/main.css">
+    
+</head>
+<body>
+    <div class="viewport">
+        <!-- 头部 -->
+        <header class="header">
+            <div class="wrapper">
+                <!-- 导航 -->
+                <nav>
+                    <a href="./index.html">Home</a>
+                    <a href="./about.html">关于我们</a>
+                    <a href="./join.html">传智招聘</a>
+                </nav>
+                <!-- 注册/登录 -->
+                <div class="extra">
+                    <a href="/register">注册</a>
+                    <a href="/login">登录</a>
+                </div>
+            </div>
+        </header>
+        <!-- 主体 -->
+        <div class="body">
+            {{{block ('body')}}}
+        </div>
+        <!-- 底部 -->
+        <footer class="footer">
+            <div class="wrapper">
+                <dl>
+                    <dt>合作网站</dt>
+                    <dd>
+                        <a href="javascript:;">传智播客</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;">双元课堂</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;">传智学院</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;">博学谷在线教育平台</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>友情链接</dt>
+                    <dd>
+                        <a href="javascript:;">Swift Note GaoWhen高H温</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;">大猫の意淫网志 裁纸刀下</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;">Smallni's blog 米随随s5s5</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;">芒果 软件开发网 觉唯前端</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;">JSER CSS HOUSE Time Machine</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;">前端博客导航 WEB前端开发</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>关注我的微信</dt>
+                    <dd>
+                        <img class="qrcode" src="home/images/qrcode.jpg" alt="">
+                    </dd>
+                </dl>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="/admin/assets/jquery/jquery.min.js"></script>
+{{{block ('script')}}}
+
+</html>

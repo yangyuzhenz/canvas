@@ -1,0 +1,73 @@
+{{extend ('./layout.xtpl')}}
+
+{{#block ('body')}}
+<!-- 写文章 -->
+<div class="body blog">
+    <!-- 面包屑 -->
+    <ol class="breadcrumb">
+        <li><a href="javascript:;">文章管理</a></li>
+        <li class="active">写文章</li>
+    </ol>
+    <div class="settings">
+        <form action="" class="form-horizontal">
+            <div class="form-group">
+                <label for="" class="col-xs-3 control-label">标题</label>
+                <div class="col-xs-6">
+                    <input type="text" name="title" class="form-control input-sm">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="col-xs-3 control-label">摘要</label>
+                <div class="col-xs-6 ckeditor">
+                    <textarea name="brief" rows="5" class="form-control input-sm"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="col-xs-3 control-label">内容</label>
+                <div class="col-xs-6">
+                    <textarea id="ckeditor" name="content" class="form-control input-sm"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-9">
+                    <input type="submit" class="btn btn-success btn-sm pull-right"value="保 存">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{{/block}}
+
+
+{{#block ('script')}}
+<script src="./assets/ckeditor/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('ckeditor', {
+        toolbarGroups: [
+            { name: 'clipboard', groups: ['clipboard', 'undo'] },
+            { name: 'forms' },
+            { name: 'basicstyles', groups: ['basicstyles', 'cleanup'] },
+            { name: 'paragraph', groups: ['list', 'indent', 'blocks', 'align', 'bidi'] },
+            { name: 'styles' },
+            { name: 'colors' }
+        ]
+    });
+
+    $('form').on('submit',function(){
+        var formData=$(this).serialize();
+        // console.log(formData);
+        $.ajax({
+            url:'/admin/add',
+            type:'post',
+            data:formData,
+            success:function(info){
+                // console.log(info);
+                if(info.code==10000){
+                    location.href='/admin/list'
+                }
+            }
+        })
+        return false;
+    })
+</script>
+{{/block}}

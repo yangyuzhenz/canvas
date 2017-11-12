@@ -1,0 +1,65 @@
+{{extend ('./base')}}
+
+{{#block ('body')}}
+<!-- 登录 -->
+<div class="login">
+    <div class="wrapper">
+        <div class="contact">
+            <p>有什么问题可以点击下方联系</p>
+            <img src="home/images/email.png" alt="">
+        </div>
+        <form action="">
+            <ul>
+                <li>
+                    <label for="">用户名:</label>
+                    <input type="text" name="name">
+                </li>
+                <li>
+                    <label for="">邮　箱:</label>
+                    <input type="text" name="email">
+                </li>
+                <li>
+                    <label for="">密　码:</label>
+                    <input type="password" name="pass">
+                </li>
+                <li>
+                    <label for="">确认密码:</label>
+                    <input type="password">
+                </li>
+                <li>
+                    <label for=""></label>
+                    <input type="submit" value="注 册">
+                    <a href="javascript:;">忘记密码？</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
+{{/block}}
+
+{{#block ('script')}}
+<script>
+     $('form').on('submit',function(){
+        console.log($(this).serialize());
+        
+        var _this=$(this); 
+        //以post方式发起请求
+         $.ajax({
+             
+             url:'/register',
+             type:'post',
+             data:_this.serialize(),
+             success:function(info){
+                 alert(info.msg);
+                //  console.log(info);
+
+                 if(info.code==10000){
+                     location.href='/login';
+                 }
+             }
+         })
+         //阻止默认请求
+         return false;
+     })
+</script>
+{{/block}}

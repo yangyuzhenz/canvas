@@ -1,0 +1,53 @@
+
+body, p, dl, dd, ul, h2, h3, h4 {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-weight: 400;
+    font-family: -apple-system-font, "Helvetica Neue",Tahoma,"PingFang SC","lantinghei sc","Microsoft Yahei", sans-serif;
+    color: #3A4145;
+    background-color: #ECF0F1;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1400px) {
+    .wrapper {
+        width: 1160px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1400px) {
+    .wrapper {
+        width: 960px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 959px) {
+
+    .wrapper {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .body aside {
+        display: none;
+    }
+
+    .body .main {
+        margin-right: 0 !important;
+    }
+}
+

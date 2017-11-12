@@ -1,0 +1,86 @@
+{{extend ('./base')}}
+
+{{#block ('body')}}
+<div class="wrapper">
+    <!-- 侧边栏 -->
+    <aside>
+        <!-- 广告位 -->
+        <div class="widget advert">
+            <header>赞助商</header>
+            <div class="cont">
+                <p>前端学院</p>
+                <a href="javascript:;">马上报名，即享优惠!</a>
+            </div>
+        </div>
+        <!-- 热门文章 -->
+        <div class="widget hot">
+            <header>热门文章</header>
+            <ul>
+                <li>
+                    <a href="./article.html">WeUI 发布——微信官方UI库</a>
+                </li>
+                <li>
+                    <a href="./article.html">Zen Coding: 一种快速编写HTML/CSS代码的方法</a>
+                </li>
+                <li>
+                    <a href="./article.html">QQ浏览器X5内核问题汇总</a>
+                </li>
+                <li>
+                    <a href="./article.html">一些必不可少的Sublime Text 2插件</a>
+                </li>
+                <li>
+                    <a href="./article.html">高性能 CSS3 动画</a>
+                </li>
+                <li>
+                    <a href="./article.html">[Task Master] gulp-lint</a>
+                </li>
+                <li>
+                    <a href="./article.html">前端观察又改版</a>
+                </li>
+                <li>
+                    <a href="./article.html">HTML5+CSS3 loading 效果收集</a>
+                </li>
+                <li>
+                    <a href="./article.html">meta标签常用属性整理</a>
+                </li>
+                <li>
+                    <a href="./article.html">HTML5 中 div section article 的区别</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 执门作者 -->
+        <div class="widget authors">
+            <header>热门博主</header>
+            <ul>
+                <li>
+                    <a href="./center.html">
+                        <img src="home/uploads/avatar/botue.jpg" alt="">
+                        <span>老布头儿</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./center.html">
+                        <img src="home/uploads/avatar/monkey.png" alt="">
+                        <span>程序猿</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./center.html">
+                        <img src="home/uploads/avatar/botue.jpg" alt="">
+                        <span>老布头儿</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./center.html">
+                        <img src="home/uploads/avatar/monkey.png" alt="">
+                        <span>程序猿</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <section class="main">
+        {{{block ('main')}}}
+    </section>
+</div>
+{{/block}}

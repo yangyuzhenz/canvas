@@ -1,0 +1,65 @@
+{{extend ('./layout')}} {{#block ('main')}}
+
+<!-- 博客文章 -->
+<article class="post">
+    <!-- 标题 -->
+    <header class="post-title">
+        <a href="./article.html">JS the Hardcore: 执行上下文(Execution Context)</a>
+    </header>
+    <!-- 博客信息 -->
+    <div class="post-meta">
+        <img src="./uploads/avatar/botue.jpg" alt="">
+        <a href="javascript:;">老布头儿</a>
+        <span>15 February 2017</span>
+    </div>
+    <!-- 博客概览 -->
+    <div class="post-brief">
+        <p>先看个例子: console.log(a) console.log(foo()) var a = 'hello world' function foo() { console.log('foo') } 估计大部分人早就对这种问题了如指掌了，输出结果也是脱口而出</p>
+    </div>
+    <!-- 查看全文 -->
+    <a href="./article.html" class="read-more">查看全文</a>
+</article>
+<article class="post">
+    <!-- 标题 -->
+    <header class="post-title">
+        <a href="./article.html">weui.js发布</a>
+    </header>
+    <!-- 博客信息 -->
+    <div class="post-meta">
+        <img src="./uploads/avatar/botue.jpg" alt="">
+        <a href="javascript:;">老布头儿</a>
+        <span>15 February 2017</span>
+    </div>
+    <!-- 博客概览 -->
+    <div class="post-brief">
+        <p>weui.js 是 WeUI 的轻量级 js 封装。 嗯，没啥好介绍的，直接复制项目的 Readme.md 过来好了，欢迎去项目的 Github 项目主页 star 并贡献代码。 概述 注意：由于微信小程序不支持dom操作，所以weui.js并不适用于小程序。不过WeUI也为小程</p>
+    </div>
+    <!-- 查看全文 -->
+    <a href="./article.html" class="read-more">查看全文</a>
+</article>
+<article class="post">
+    <!-- 标题 -->
+    <header class="post-title">
+        <a href="./article.html">中国第三届CSS开发者大会即将召开</a>
+    </header>
+    <!-- 博客信息 -->
+    <div class="post-meta">
+        <img src="./uploads/avatar/monkey.png" alt="">
+        <a href="javascript:;">老布头儿</a>
+        <span>15 February 2017</span>
+    </div>
+    <!-- 博客概览 -->
+    <div class="post-brief">
+        <p>中国第三届CSS开发者大会将于 2016 年 12 月 17 日在广州召开，这次请来的分享嘉宾还是非常牛逼的，有不少国内外的大牛，也有我的几个同事。 感兴趣可以直接访问上面的链接了解动态和详情。 部分讲师简介 还没有勾三股四的议题，看来是要压轴啊，好期待！</p>
+    </div>
+    <!-- 查看全文 -->
+    <a href="./article.html" class="read-more">查看全文</a>
+</article>
+<!-- 分页 -->
+<div class="pagination">
+    <a href="javascript:;" class="prev">← Newer Posts</a>
+    <span>Pages 2 of 146</span>
+    <a href="javascript:;" class="next">Older Posts →</a>
+</div>
+{{/block}}
+ 

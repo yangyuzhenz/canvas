@@ -1,0 +1,77 @@
+<!-- 引入母板 -->
+{{extend ('./base')}}
+
+{{#block ('body')}}
+<div class="login">
+    <div class="wrapper">
+        <div class="contact">
+            <p>有什么问题可以点击下方联系</p>
+            <img src="home/images/email.png" alt="">
+        </div>
+        <form action="">
+            <ul>
+                <li>
+                    <label for="">邮　箱:</label>
+                    <input type="text" name="email">
+                </li>
+                <li>
+                    <label for="">密　码:</label>
+                    <input type="password" name='pass'>
+                </li>
+                <li>
+                    <label for=""></label>
+                    <input type="submit" value="登 录">
+                    <a href="javascript:;">忘记密码？</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
+{{/block}}
+
+{{#block ('script')}}
+<!-- <script>
+    $('form').on('submit',function(){
+        var formData=$(this).serialize();
+        // console.log(formData);
+        $.ajax({
+            url:'/login',
+            type:'post',
+            data:formData,
+            success:function(info){
+                console.log(1);
+                // console.log(info);
+                // alert(info.msg);
+                if(info.code==10000){
+                    location.href='/admin';
+                }
+            }
+        })
+        return false;
+    })
+
+</script> -->
+<script>
+        $('form').on('submit', function () {
+            // 获取表单数据
+            var formData = $(this).serialize();
+            // 以post方式请求接口
+            $.ajax({
+                url: '/login',
+                type: 'post',
+                data: formData,
+                success: function (info) {
+                    // 根据响应结果
+                    // 判断是否登录成功
+                    if(info.code == 10000) {
+                        location.href = '/admin';
+                    }
+                }
+            });
+
+            // 禁止表单默认提交
+            return false;
+        })
+    </script>
+
+{{/block}}

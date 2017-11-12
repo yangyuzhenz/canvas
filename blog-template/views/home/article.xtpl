@@ -1,0 +1,48 @@
+{{extend ('./layout')}}
+
+{{#block ('main')}}
+<div class="article">
+    <h2 class="title">One Day</h2>
+    <p>这几年，前端技术发展很快，每年都有新的技术名词流行，ReactJS、Angular 2、VUE、微信小程序。。。而我重新学习了 swift ，是的，重新学习，之前读过《swift 1.0 从入门到放弃》。</p>
+    <p>想起当年学习前端开发的经历，我开始写一些实际的小 app 来练手，总算是没有又一次『从入门到放弃』</p>
+    <p>有一天突然想到，每一天不管开心还是难过，不管是平淡还是难忘，都要过的有意义——从来不写日记的我第一次想每天花几分钟记录一下自己的一天了。（日记？上个世纪的东西了吧？！）</p>
+    <p>于是就尝试了各种 app，记事类的、日记类的。却发现每个 app 都想做的很完美，带上各种功能，需要的不需要的全都有，干扰的东西太多。。。</p>
+    <p>我只想一个单纯的记录自己每一天的 app，几张图片，一段文字，最多再加上一个地理位置，嗯，真实的自己，只有自己能看到，也不用担心有没有人点赞。</p>
+    <p>干脆就自己用 swift 写一个吧：One Day.</p>
+    <p>有一天正在听最喜欢的《One Day》，嗯，海贼王中艾斯被行刑的那一段的主题曲，这段剧情也是海贼王中给我感受最深的一段。于是 App 的名字就叫 One Day 了。</p>
+    <p>One Day 的目标就只有一个：记录『最真实的自己』。所以从一开始就完全抛弃了社交和分享的功能。</p>
+</div>
+<!-- 作者 -->
+<div class="author">
+    <div class="avatar">
+        <a href="./center.html">
+            <img src="home/uploads/avatar/monkey.png" alt="">
+        </a>
+    </div>
+    <div class="wrap-box">
+        <!-- 个人资料 -->
+        <div class="meta">
+            <h4 class="name">
+                <a href="./center.html">老布头儿</a>
+            </h4>
+            <p class="intro">爱好前端设计与开发，崇尚一目了然的设计。现居深圳/广州，就职于腾讯微信设计团队。</p>
+            <div class="extra">
+                <span class="icon-location"> 北京. 传智播客</span>
+                <span class="icon-link">
+                    <a href="javascript:;">http://botue.com</a>
+                </span>
+                <span class="icon-twitter">
+                    <a href="javascript:;"> @botue</a>
+                </span>
+            </div>
+        </div>
+        <!-- 社区 -->
+        <div class="social">
+            <h4>分享</h4>
+            <a href="javascript:;" class="icon-twitter"></a>
+            <a href="javascript:;" class="icon-facebook"></a>
+            <a href="javascript:;" class="icon-weibo"></a>
+        </div>
+    </div>
+</div>
+{{/block}}

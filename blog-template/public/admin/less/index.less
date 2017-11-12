@@ -1,0 +1,289 @@
+
+@import 'base.less';
+@import 'variable.less';
+@import 'mixin.less';
+
+
+// 侧边栏
+.aside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #2f4050;
+    
+    // 个人资料
+    .profile {
+        height: 160px;
+        padding-top: 25px;
+        text-align: center;
+        background-color: #243443;
+        
+        // 头像
+        .avatar {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        h4 {
+            color: #a9b0c2;
+            font-size: 16px;
+        }
+    }
+
+    // 导航菜单
+    .navs {
+        padding: 20px 0;
+
+        li a + ul {
+            display: none;
+            overflow: hidden;
+        }
+
+        a {
+            width: 100%;
+            line-height: 1;
+            padding: 10px 20px;
+            margin: 4px 0;
+            color: #a9b0c2;
+
+            &:hover {
+                color: #F6F6F6;
+                background-color: #243443;
+            }
+        }
+
+        a + ul a {
+            padding-left: 46px;
+        }
+
+        .active {
+            color: #F6F6F6;
+            background-color: #243443;
+        }
+
+        i {
+            margin-right: 8px;
+        }
+
+        .arrow {
+            float: right;
+        }
+    }
+}
+
+// 主体
+.main {
+    min-width: 844px;
+    padding: 72px 0 30px 180px;
+    
+    // 头部
+    .header {
+        width: 100%;
+        padding-left: 180px;
+        margin-left: -195px;
+        position: fixed;
+        top: 0;
+        z-index: 99;
+
+        .navbar-custom {
+            padding-right: 15px;
+            background-color: #FFF;
+            border-bottom: 1px solid #EEE;
+            .border-radius(0);
+        }
+
+        .navbar-header {
+        	float: left;
+        }
+
+		.navbar-right {
+            float: right!important;
+			margin-right: -15px;
+
+			li {
+				float: left;
+			}
+		}
+
+        .navbar-brand {
+            height: auto;
+            line-height: 1;
+            padding: 4px 6px;
+            margin: 12px 0 0 15px;
+            color: #FFF;
+            background-color: #5cb85c;
+            .border-radius(2px);
+        }
+
+        .navbar-nav {
+
+            a {
+                position: relative;
+                background-color: transparent;
+            }
+
+            .fa {
+                font-size: 16px;
+            }
+        }
+    }
+    
+    // 主体
+    .body {
+
+		.form-inline .form-control {
+			display: inline-block;
+			width: auto;
+			vertical-align: middle;
+		}
+
+        // 面包屑
+        .breadcrumb {
+            background-color: #FFF;
+            border: 1px solid #EEE;
+        }
+
+        label {
+            color: #666;
+            font-weight: normal;
+        }
+
+        .repass {
+            padding: 40px 0 20px;
+            background-color: #FFF;
+        }
+    }
+
+    // 首页
+    .index {
+        // 首页
+        .profile {
+
+            .cell {
+                padding: 15px;
+                color: #FFF;
+                overflow: hidden;
+                .border-radius(4px);
+
+                .fa {
+                    font-size: 50px;
+                    float: left;
+                }
+
+                span, h5 {
+                    display: block;
+                    line-height: 1.8;
+                    margin: 0 0 0 70px;
+                }
+
+                h5 {
+                    font-size: 15px;
+                }
+
+                span {
+                    font-size: 13px;
+                }
+            }
+
+            .money {
+                background-color: #FC8675;
+            }
+
+            .th {
+                background-color: #5AB6DF;
+            }
+
+            .user {
+                background-color: #65CEA7;
+            }
+
+            .eye {
+                background-color: #EBC85E;
+            }
+
+            // 图表
+            .chart {
+                min-height: 400px;
+                padding: 30px 15px;
+                margin-top: 20px;
+                background-color: #FFF;
+                overflow: hidden;
+            }
+        }
+    }
+
+    // 个人资料
+    .center {
+        // 个人设置
+        .settings {
+            padding: 40px 0 20px;
+            background-color: #FFF;
+
+            .preview {
+                width: 120px;
+                height: 120px;
+                padding: 0;
+                margin-left: 15px;
+                overflow: hidden;
+                position: relative;
+
+                &:hover .cover {
+                    background-color: rgba(0, 0, 0, 0.4);
+                }
+
+                &:hover .fa-upload {
+                    color: rgba(240, 240, 240, 0.8);
+                }
+            }
+
+            input[type="file"] {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 9;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+
+            .cover {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                line-height: 120px;
+                font-size: 40px;
+                background-color: rgba(0, 0, 0, 0);
+                transition: all 0.3s;
+            }
+
+            .fa-upload {
+                color: rgba(240, 240, 240, 0);
+            }
+        }
+    }
+
+    // 博客
+    .blog {
+
+        .settings {
+            padding: 40px 0 20px;
+            background-color: #FFF;
+        }
+
+        a.title {
+            color: #666;
+        }
+
+        a.title:hover {
+            color: #333;
+        }
+    }
+}
